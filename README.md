@@ -1,6 +1,6 @@
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Portugol_Studio_Logo.png" width="120">
+<img src="https://cdn-1.webcatalog.io/catalog/portugol-webstudio/portugol-webstudio-icon-filled-256.png?v=1714775521095" width="100">
 
 Repositório criado para armazenar minhas atividades e exercícios desenvolvidos em Portugol Studio durante os estudos de lógica de programação. Meu objetivo é
 Praticar lógica de programação e melhorar minhas habilidades em algoritmos.
