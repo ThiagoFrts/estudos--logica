@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #110e0e;
+    color: #f2f2f2;
+}
+
+.topo {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    padding: 0 5%;
+    background: radial-gradient(circle at 50% 60%, #740202, #110e0e 60%);
+}
+
+h1 {
+    font-size: clamp(36px, 7vw, 80px);
+}
+
+@keyframes flutuar {
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.vilao-10 {
+    --cor: #e72be7;
+    --img: url('../img/vilao10.jpg');
+}
+
+.vilao-9 {
+    --cor: #0c33df;
+    --img: url('../img/vilao9.jpg');
+}
+
+.vilao-8 {
+    --cor: #00ff00c7;
+    --img: url('../img/vilao8.jpg');
+}
+
+.vilao-7 {
+    --cor: #0b5205;
+    --img: url('../img/vilao7.jpg');
+}
+
+.vilao-6 {
+    --cor: #dbb20d;
+    --img: url('../img/vilao6.jpg');
+}
+
+.vilao-5 {
+    --cor: #a85c16;
+    --img: url('../img/vilao5.jpg');
+}
+
+.vilao-4 {
+    --cor: #9f0fc4;
+    --img: url('../img/vilao4.jpg');
+}
+
+.vilao-3 {
+    --cor: #9aa5b1;
+    --img: url('../img/vilao3.jpeg');
+}
+
+.vilao-2 {
+    --cor: #43046d;
+    --img: url('../img/vilao2.jpg');
+}
+
+.vilao-1 {
+    --cor: #b60c0c;
+    --img: url('../img/vilao1.jpg');
+}
+
+
+.vilao {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    overflow: hidden;
+    scroll-snap-align: start;
+    background:
+        linear-gradient(to right, #110e0e 50%, color-mix(in srgb, var(--cor) 45%, #36883a67));
+}
+
+
+.vilao::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--img) var(--pos, center) / cover no-repeat;
+    opacity: 0.6;
+    transform: scale(1.1);
+    transition: transform 2.4s ease;
+}
+
+/* camada escura só do lado do texto, para ele continuar legível */
+.vilao::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to right,
+            rgba(10, 5, 5, 0.9) 0%,
+            rgba(10, 5, 5, 0.5) 40%,
+            transparent 75%);
+}
+
+.vilao.direita::before {
+    background: linear-gradient(to left,
+            rgba(10, 5, 5, 0.9) 0%,
+            rgba(10, 5, 5, 0.5) 40%,
+            transparent 75%);
+}
+
+.vilao.visivel::after {
+    transform: scale(1);
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+}
+
+.posicao {
+    font-size: clamp(80px, 14vw, 150px);
+    font-weight: bold;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--cor);
+}
+
+h2 {
+    font-size: clamp(36px, 5vw, 56px);
+    margin-top: 10px;
+}
+
+.origem {
+    color: var(--cor);
+    letter-spacing: 2px;
+    margin: 8px 0 20px;
+}
+
+.descricao {
+    line-height: 1.7;
+    font-size: 18px;
+    color: #cfcfcf;
+}
+
+.frase {
+    margin-top: 24px;
+    padding-left: 16px;
+    border-left: 3px solid var(--cor);
+    font-style: italic;
+}
+
+.card>* {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.card>.posicao {
+    transform: translateX(-30px);
+}
+
+.vilao.visivel .card>* {
+    opacity: 1;
+    transform: none;
+}
+
+.vilao.visivel .card> :nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.vilao.visivel .card> :nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.vilao.visivel .card> :nth-child(4) {
+    transition-delay: 0.55s;
+}
+
+.vilao.visivel .card> :nth-child(5) {
+    transition-delay: 0.7s;
+}
+
+.vilao.visivel .card> :nth-child(6) {
+    transition-delay: 0.85s, 0.85s, 0s, 0s, 0s;
+}
+
+.progresso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: var(--cor, #fff);
+    transition: background 0.6s;
+    z-index: 20;
+}
+
+.nav-lateral {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 15;
+}
+
+.nav-lateral a {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: background 0.3s, transform 0.3s, border-color 0.6s;
+}
+
+.nav-lateral a.ativo {
+    background: var(--cor, #ff0707);
+    transform: scale(1.4);
+}
+
+
+@media (max-width: 700px) {
+
+    .vilao::before,
+    .vilao.direita::before {
+        background: linear-gradient(to top,
+                rgba(10, 5, 5, 0.95) 0%,
+                rgba(10, 5, 5, 0.6) 70%,
+                rgba(10, 5, 5, 0.3) 100%);
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .nav-lateral {
+        right: 8px;
+    }
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 28px;
+    border: 2px solid var(--cor);
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: transparent;
+    transition: opacity 0.8s ease, transform 0.8s ease, background 0.3s, box-shadow 0.3s, translate 0.3s ease;
+}
+
+.botao:hover {
+    translate: 0 -5px;
+    background: color-mix(in srgb, var(--cor) 15%, transparent);
+    box-shadow: 0 0 28px color-mix(in srgb, var(--cor) 60%, transparent);
+}
+
+.botao:active {
+    translate: 0 -2px;
+    background: color-mix(in srgb, var(--cor) 55%, transparent);
+}
+
+.botao:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+.pagina {
+    --cor: #811010;
+    min-height: 100vh;
+    padding: 6% 8%;
+    background: linear-gradient(to right, #110e0e 15%, color-mix(in srgb, var(--cor) 45%, #110e0e));
+}
+
+.pagina .conteudo {
+    max-width: 680px;
+}
+
+.pagina h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    margin: 32px 0 8px;
+}
+
+.pagina p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #cfcfcf;
+    margin-top: 20px;
+}
