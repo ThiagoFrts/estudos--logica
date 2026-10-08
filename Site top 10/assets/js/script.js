@@ -1,4 +1,4 @@
-const secoes = document.querySelectorAll(".vilao");
+const secoes = document.querySelectorAll("main section");
 const links = document.querySelectorAll("#navLateral a");
 const barra = document.getElementById("progresso");
 const topo = document.querySelector(".topo");
