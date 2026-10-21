@@ -1,0 +1,40 @@
+-- 1 
+
+SELECT MIN(preco_base) FROM produto;
+========================================= 
+-- 2
+
+SELECT MIN(valor_total) FROM pedido;
+=========================================
+-- 3
+
+SELECT MIN(frete) FROM pedido;
+=========================================
+-- 4
+
+SELECT MIN(desconto) FROM pedido;
+=========================================
+-- 5
+
+SELECT MIN(quantidade) FROM item_pedido;
+=========================================
+-- 6
+
+SELECT MIN(quantidade) FROM movimentacao_estoque;	
+=========================================
+-- 7
+
+SELECT MIN(quantidade_estoque) FROM produto_variacao;
+=========================================
+-- 8
+
+SELECT MIN(custo_unitario) FROM movimentacao_estoque;
+=========================================
+-- 9
+
+SELECT MIN(subtotal) FROM pedido;
+=========================================
+-- 10
+
+SELECT MIN(preco_base) FROM produto WHERE id_categoria = 1;
+=========================================

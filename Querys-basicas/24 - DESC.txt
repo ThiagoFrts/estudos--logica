@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM produto ORDER BY preco_base DESC;
+=========================================
+-- 2
+
+SELECT * FROM cliente ORDER BY nome DESC;
+=========================================
+-- 3
+
+SELECT * FROM categoria ORDER BY nome DESC;
+=========================================
+-- 4
+
+SELECT * FROM pedido ORDER BY valor_total DESC;
+=========================================
+-- 5
+
+SELECT * FROM produto_variacao ORDER BY quantidade_estoque DESC;
+=========================================
+-- 6
+
+SELECT * FROM fornecedor ORDER BY nome DESC;
+=========================================
+-- 7
+
+SELECT * FROM movimentacao_estoque ORDER BY quantidade DESC;
+=========================================
+-- 8
+
+SELECT * FROM item_pedido ORDER BY preco_unitario DESC;
+=========================================
+-- 9
+
+SELECT cidade FROM endereco ORDER BY cidade DESC;
+=========================================
+-- 10
+
+SELECT * FROM pedido ORDER BY data_pedido DESC;
+================

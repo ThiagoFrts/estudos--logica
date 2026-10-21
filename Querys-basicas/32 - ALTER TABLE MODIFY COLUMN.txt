@@ -1,0 +1,51 @@
+-- 1
+
+ALTER TABLE cliente MODIFY COLUMN nome VARCHAR(150);
+=========================================
+-- 2
+
+ALTER TABLE cliente
+MODIFY COLUMN telefone VARCHAR(25);
+=========================================
+-- 3
+
+ALTER TABLE categoria
+MODIFY COLUMN descricao VARCHAR(300);
+=========================================
+-- 4
+
+ALTER TABLE produto
+MODIFY COLUMN nome VARCHAR(150) NOT NULL;
+=========================================
+-- 5
+
+ALTER TABLE produto
+MODIFY COLUMN descricao VARCHAR(500);
+=========================================
+-- 6
+
+ALTER TABLE fornecedor
+MODIFY COLUMN nome VARCHAR(150) NOT NULL;
+=========================================
+-- 7
+
+ALTER TABLE movimentacao_estoque
+MODIFY COLUMN observacao VARCHAR(300);
+=========================================
+-- 8
+
+ALTER TABLE produto
+MODIFY COLUMN preco_base DECIMAL(12,2) NOT NULL;
+=========================================
+-- 9
+
+ALTER TABLE pedido
+MODIFY COLUMN valor_total DECIMAL(12,2) NOT NULL;
+=========================================
+-- 10
+
+ALTER TABLE tamanho
+MODIFY COLUMN descricao VARCHAR(80);
+
+DESCRIBE tamanho;
+=========================================

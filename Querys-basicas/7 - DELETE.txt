@@ -1,0 +1,51 @@
+-- 1 
+
+DELETE FROM categoria WHERE id_categoria = 10;
+========================================= 
+-- 2
+
+DELETE FROM categoria WHERE id_categoria = 9;
+=========================================
+-- 3
+
+AND id_tamanho NOT IN (SELECT id_tamanho FROM produto_variacao);
+=========================================
+-- 4
+
+DELETE FROM palavra_chave WHERE termo = 'fitness';
+=========================================
+-- 5
+
+DELETE FROM fornecedor WHERE id_fornecedor = 9;
+=========================================
+-- 6
+
+DELETE FROM cliente
+WHERE cpf = '12345678922'
+  AND id_cliente NOT IN (SELECT id_cliente FROM pedido)
+  AND id_cliente NOT IN (SELECT id_cliente FROM endereco);
+=========================================
+-- 7
+
+DELETE FROM endereco WHERE id_endereco = 22;
+=========================================
+-- 8
+
+INSERT INTO movimentacao_estoque (id_variacao, tipo_movimentacao, quantidade, observacao)
+VALUES (72, 'ENTRADA', 5, 'TESTE');
+DELETE FROM movimentacao_estoque WHERE observacao = 'TESTE';
+=========================================
+-- 9
+
+DELETE FROM produto
+WHERE id_produto = 25
+  AND id_produto NOT IN (SELECT id_produto FROM produto_variacao);	
+=========================================
+-- 10
+
+DELETE FROM produto_variacao WHERE id_variacao = 72;
+=========================================
+
+
+
+

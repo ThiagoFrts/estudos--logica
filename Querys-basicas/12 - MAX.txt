@@ -1,0 +1,39 @@
+-- 1 
+
+SELECT MAX(preco_base) FROM produto;
+========================================= 
+-- 2
+
+SELECT MAX(valor_total) FROM pedido;
+=========================================
+-- 3
+
+SELECT MAX(frete) FROM pedido;
+=========================================
+-- 4
+
+SELECT MAX(desconto) FROM pedido;
+=========================================
+-- 5
+
+SELECT MAX(quantidade) FROM item_pedido;
+=========================================
+-- 6
+
+SELECT MAX(quantidade) FROM movimentacao_estoque;
+=========================================
+-- 7
+
+SELECT MAX(quantidade_estoque) FROM produto_variacao;
+=========================================
+-- 8
+
+SELECT MAX(custo_unitario) FROM movimentacao_estoque;
+=========================================
+-- 9
+
+SELECT MAX(quantidade_estoque) FROM produto_variacao WHERE ativo = TRUE;=========================================
+-- 10
+
+SELECT MAX(subtotal) FROM pedido;
+=========================================

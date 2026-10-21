@@ -1,0 +1,44 @@
+-- 1 
+
+SELECT COUNT(*) FROM cliente; 
+========================================= 
+-- 2
+
+SELECT COUNT(id_categoria) FROM categoria; 
+=========================================
+-- 3
+
+select COUNT(*) FROM produto;
+=========================================
+-- 4
+
+select COUNT(id_variacao) FROM produto_variacao;
+=========================================
+-- 5
+
+select COUNT(id_item) FROM item_pedido;
+=========================================
+-- 6
+
+select COUNT(id_item) FROM item_pedido;
+=========================================
+-- 7
+
+select COUNT(id_movimentacao) FROM movimentacao_estoque;
+=========================================
+-- 8
+
+select COUNT(telefone) FROM cliente;	
+=========================================
+-- 9
+
+SELECT COUNT(desconto) FROM pedido;	
+=========================================
+-- 10
+
+SELECT COUNT(email) FROM fornecedor;
+=========================================
+
+
+
+

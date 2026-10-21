@@ -1,0 +1,50 @@
+-- 1
+
+ALTER TABLE cliente
+ADD COLUMN observacao VARCHAR(255);
+=========================================
+-- 2
+
+ALTER TABLE fornecedor
+ADD COLUMN site VARCHAR(150);
+=========================================
+-- 3
+
+ALTER TABLE categoria
+ADD COLUMN ativo BOOLEAN;
+=========================================
+-- 4
+
+ALTER TABLE produto
+ADD COLUMN marca VARCHAR(80);
+=========================================
+-- 5
+
+ALTER TABLE cor
+ADD COLUMN codigo_hex CHAR(7);
+=========================================
+-- 6
+
+ALTER TABLE tamanho
+ADD COLUMN ordem_exibicao INT;
+=========================================
+-- 7
+
+ALTER TABLE palavra_chave
+ADD COLUMN descricao VARCHAR(150);
+=========================================
+-- 8
+
+ALTER TABLE pedido
+ADD COLUMN observacao VARCHAR(255);
+=========================================
+-- 9
+
+ALTER TABLE movimentacao_estoque
+ADD COLUMN usuario_responsavel VARCHAR(120);
+=========================================
+-- 10
+
+ALTER TABLE cliente
+ADD COLUMN data_atualizacao DATETIME;
+=========================================

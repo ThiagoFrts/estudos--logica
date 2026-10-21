@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM pedido WHERE status_pedido = 'PENDENTE' OR status_pedido = 'PROCESSANDO';
+=========================================
+-- 2
+
+SELECT * FROM produto WHERE id_categoria = 1 OR id_categoria = 2;
+=========================================
+-- 3
+
+SELECT * FROM endereco WHERE cidade = 'Belo Horizonte' OR cidade = 'Contagem';
+=========================================
+-- 4
+
+SELECT * FROM pedido WHERE forma_pagamento = 'PIX' OR forma_pagamento = 'CARTAO';
+=========================================
+-- 5
+
+SELECT * FROM movimentacao_estoque WHERE tipo_movimentacao = 'ENTRADA' OR tipo_movimentacao = 'AJUSTE';
+=========================================
+-- 6
+
+SELECT * FROM produto WHERE preco_base < 50 OR preco_base > 500;
+=========================================
+-- 7
+
+SELECT * FROM produto_variacao WHERE quantidade_estoque = 0 OR ativo = FALSE;
+=========================================
+-- 8
+
+SELECT * FROM fornecedor WHERE telefone IS NULL OR email IS NULL;
+=========================================
+-- 9
+
+SELECT * FROM pedido WHERE desconto > 0 OR frete > 0;
+=========================================
+-- 10
+
+SELECT * FROM cliente WHERE email = 'ana.souza@email.com' OR email = 'carlos.lima@email.com';
+=========================================

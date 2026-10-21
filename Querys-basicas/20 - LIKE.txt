@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM cliente WHERE nome LIKE 'A%';
+=========================================
+-- 2
+
+SELECT * FROM cliente WHERE nome LIKE '%Silva%';
+=========================================
+-- 3
+
+SELECT * FROM cliente WHERE email LIKE '%.com';
+=========================================
+-- 4
+
+SELECT * FROM produto WHERE nome LIKE '%camisa%';
+=========================================
+-- 5
+
+SELECT * FROM produto WHERE descricao LIKE '%masculino%';
+=========================================
+-- 6
+
+SELECT * FROM categoria WHERE nome LIKE '%moda%';
+=========================================
+-- 7
+
+SELECT * FROM fornecedor WHERE nome LIKE 'M%';
+=========================================
+-- 8
+
+SELECT cidade FROM endereco WHERE cidade LIKE '%São%';
+=========================================
+-- 9
+
+SELECT * FROM produto_variacao WHERE sku LIKE 'SKU-001%';
+=========================================
+-- 10
+
+SELECT * FROM palavra_chave WHERE termo LIKE '%verão%';
+=========================================

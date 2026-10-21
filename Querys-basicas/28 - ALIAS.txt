@@ -1,0 +1,46 @@
+-- 1
+
+SELECT nome AS 'Cliente' FROM cliente;
+=========================================
+-- 2
+
+SELECT email AS 'E-mail' FROM cliente;
+=========================================
+-- 3
+
+SELECT preco_base AS 'Preço Base' FROM produto;
+=========================================
+-- 4
+
+SELECT valor_total AS 'Valor Total' FROM pedido;
+=========================================
+-- 5
+
+SELECT quantidade_estoque AS 'Estoque Atual' FROM produto_variacao;
+=========================================
+-- 6
+
+SELECT data_pedido AS 'Data do Pedido' FROM pedido;
+=========================================
+-- 7
+
+SELECT preco_unitario AS 'Preço Unitário' FROM item_pedido;
+=========================================
+-- 8
+
+SELECT tipo_movimentacao AS 'Tipo de Movimento'
+FROM movimentacao_estoque;
+=========================================
+-- 9
+
+SELECT custo_unitario AS 'Custo Unitário'
+FROM movimentacao_estoque;
+=========================================
+-- 10
+
+SELECT
+    nome AS 'Produto',
+    descricao AS 'Descrição',
+    preco_base AS 'Preço Base'
+FROM produto;
+=========================================

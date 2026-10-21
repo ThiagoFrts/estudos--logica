@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM produto ORDER BY preco_base DESC LIMIT 5;
+=========================================
+-- 2
+
+SELECT * FROM produto ORDER BY preco_base asc LIMIT 10;
+=========================================
+-- 3
+
+SELECT * FROM cliente ORDER BY nome asc LIMIT 5;
+=========================================
+-- 4
+
+SELECT * FROM pedido ORDER BY valor_total DESC LIMIT 10;
+=========================================
+-- 5
+
+SELECT * FROM pedido ORDER BY data_pedido DESC LIMIT 5;
+=========================================
+-- 6
+
+SELECT * FROM produto_variacao ORDER BY quantidade_estoque DESC LIMIT 10;
+=========================================
+-- 7
+
+SELECT * FROM movimentacao_estoque WHERE tipo_movimentacao = 'ENTRADA' ORDER BY quantidade DESC LIMIT 5;
+=========================================
+-- 8
+
+SELECT * FROM item_pedido ORDER BY preco_unitario DESC LIMIT 10;
+=========================================
+-- 9
+
+SELECT * FROM categoria ORDER BY nome ASC LIMIT 5;
+=========================================
+-- 10
+
+SELECT * FROM fornecedor ORDER BY id_fornecedor DESC LIMIT 3;
+=========================================

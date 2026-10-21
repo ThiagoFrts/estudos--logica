@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM cliente WHERE telefone IS NULL;
+=========================================
+-- 2
+
+SELECT * FROM endereco WHERE complemento IS NULL;
+=========================================
+-- 3
+
+SELECT * FROM fornecedor WHERE cnpj IS NULL;
+=========================================
+-- 4
+
+SELECT * FROM fornecedor WHERE telefone IS NULL;
+=========================================
+-- 5
+
+SELECT * FROM fornecedor WHERE email IS NULL;
+=========================================
+-- 6
+
+SELECT * FROM produto WHERE imagem_url IS NULL;
+=========================================
+-- 7
+
+SELECT * FROM produto WHERE id_categoria IS NULL;
+=========================================
+-- 8
+
+SELECT * FROM movimentacao_estoque WHERE id_fornecedor IS NULL;
+=========================================
+-- 9
+
+SELECT * FROM movimentacao_estoque WHERE id_pedido IS NULL;
+=========================================
+-- 10
+
+SELECT * FROM movimentacao_estoque WHERE custo_unitario IS NULL;
+=========================================

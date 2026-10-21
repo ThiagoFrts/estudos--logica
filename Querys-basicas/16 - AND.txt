@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM produto WHERE preco_base > 100 AND preco_base < 300;
+=========================================
+-- 2
+
+SELECT * FROM pedido WHERE status_pedido = 'ENTREGUE' AND valor_total > 500;
+=========================================
+-- 3
+
+SELECT * FROM produto_variacao WHERE ativo = TRUE AND quantidade_estoque > 0;
+=========================================
+-- 4
+
+SELECT c.* FROM cliente c, endereco e WHERE c.id_cliente = e.id_cliente AND e.cidade = 'Belo Horizonte' AND c.telefone IS NOT NULL;
+=========================================
+-- 5
+
+SELECT * FROM movimentacao_estoque WHERE tipo_movimentacao = 'ENTRADA' AND quantidade > 10;
+=========================================
+-- 6
+
+SELECT * FROM item_pedido WHERE quantidade > 1 AND preco_unitario > 50;
+=========================================
+-- 7
+
+SELECT * FROM produto WHERE id_categoria = 1 AND preco_base > 100;
+=========================================
+-- 8
+
+SELECT * FROM pedido WHERE forma_pagamento = 'PIX' AND valor_total > 200;
+=========================================
+-- 9
+
+SELECT * FROM fornecedor WHERE email IS NOT NULL AND telefone IS NOT NULL;
+=========================================
+-- 10
+
+SELECT * FROM produto WHERE nome = 'Camiseta Básica' AND preco_base >= 30 AND preco_base <= 80;
+=========================================

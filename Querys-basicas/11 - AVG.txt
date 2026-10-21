@@ -1,0 +1,40 @@
+-- 1 
+
+SELECT ROUND(AVG(preco_base), 2) FROM produto;
+========================================= 
+-- 2
+
+SELECT ROUND(AVG(valor_total), 2) FROM pedido;
+=========================================
+-- 3
+
+SELECT ROUND(AVG(frete), 2) FROM pedido;
+=========================================
+-- 4
+
+SELECT ROUND(AVG(desconto), 2) FROM pedido;
+=========================================
+-- 5
+
+SELECT ROUND(AVG(quantidade), 2) FROM item_pedido;
+=========================================
+-- 6
+
+SELECT ROUND(AVG(quantidade), 2) FROM movimentacao_estoque;
+=========================================
+-- 7
+
+SELECT ROUND(AVG(custo_unitario), 2) FROM movimentacao_estoque;
+=========================================
+-- 8
+
+SELECT ROUND(AVG(preco_base), 2) FROM produto WHERE id_categoria = 1;
+=========================================
+-- 9
+
+SELECT ROUND(AVG(valor_total), 2) FROM pedido;
+=========================================
+-- 10
+
+SELECT ROUND(AVG(quantidade_estoque), 2) FROM produto_variacao;
+=========================================

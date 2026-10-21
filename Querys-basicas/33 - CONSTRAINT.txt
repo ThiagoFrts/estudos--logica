@@ -1,0 +1,73 @@
+-- 1
+
+CREATE TABLE cliente_teste (
+id_cliente  INT PRIMARY KEY NOT NULL,
+nome VARCHAR(100) NOT  NULL 
+);
+=========================================
+-- 2
+
+CREATE TABLE categoria_teste (
+nome VARCHAR(100) UNIQUE
+);
+=========================================
+-- 3
+
+CREATE TABLE produto_teste (
+preco DECIMAL(10,2)
+CHECK (preco>=0)
+);	
+=========================================
+-- 4
+
+CREATE TABLE pedido_teste (
+ status VARCHAR(20) DEFAULT 'PENDENTE'
+);
+=========================================
+-- 5
+
+CREATE TABLE exemplo_id (
+    id INT AUTO_INCREMENT PRIMARY KEY
+);
+=========================================
+-- 6
+
+CREATE TABLE endereco_teste (
+	id_cliente INT,
+	FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+=========================================
+-- 7
+
+CREATE TABLE associativa_teste (
+	teste_associacao VARCHAR(30),
+	associacao VARCHAR(30),
+	PRIMARY KEY(teste_associacao, associacao)
+);
+=========================================
+-- 8
+
+ALTER TABLE exemplo_id
+ADD COLUMN codigo VARCHAR(50);
+
+ALTER TABLE exemplo_id
+ADD CONSTRAINT uk_codigo UNIQUE (codigo);
+=========================================
+-- 9
+
+ALTER TABLE exemplo_id
+ADD COLUMN idade INT;
+
+ALTER TABLE exemplo_id
+ADD CONSTRAINT chk_idade CHECK (idade >= 18);
+=========================================
+-- 10
+
+CREATE TABLE teste_constraints (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    status VARCHAR(20) DEFAULT 'ATIVO',
+    idade INT CHECK (idade >= 18)
+);
+=========================================

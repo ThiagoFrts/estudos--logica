@@ -1,0 +1,44 @@
+-- 1 
+
+SELECT * FROM cliente;
+========================================= 
+-- 2
+
+SELECT nome, email FROM cliente;
+=========================================
+-- 3
+
+SELECT id_produto, nome, preco_base FROM produto;
+=========================================
+-- 4
+
+SELECT id_categoria, nome, descricao FROM categoria;
+=========================================
+-- 5
+
+SELECT nome, telefone FROM fornecedor;
+=========================================
+-- 6
+
+SELECT sku, quantidade_estoque, ativo FROM produto_variacao;
+=========================================
+-- 7
+
+SELECT id_pedido, data_pedido, status_pedido, valor_total FROM pedido;
+=========================================
+-- 8
+
+SELECT id_item, id_pedido, quantidade, preco_unitario FROM item_pedido;
+=========================================
+-- 9
+
+SELECT id_movimentacao, tipo_movimentacao, quantidade, data_movimentacao FROM movimentacao_estoque;
+=========================================
+-- 10
+
+SELECT nome, descricao, preco_base FROM produto;
+=========================================
+
+
+
+

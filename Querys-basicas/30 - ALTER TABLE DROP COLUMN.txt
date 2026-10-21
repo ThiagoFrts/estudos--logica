@@ -1,0 +1,50 @@
+-- 1
+
+ALTER TABLE cliente
+DROP COLUMN observacao;
+=========================================
+-- 2
+
+ALTER TABLE fornecedor
+DROP COLUMN site;
+=========================================
+-- 3
+
+ALTER TABLE categoria
+DROP COLUMN ativo;
+=========================================
+-- 4
+
+ALTER TABLE produto
+DROP COLUMN marca;
+=========================================
+-- 5
+
+ALTER TABLE cor
+DROP COLUMN codigo_hex;
+=========================================
+-- 6
+
+ALTER TABLE tamanho
+DROP COLUMN ordem_exibicao;
+=========================================
+-- 7
+
+ALTER TABLE palavra_chave
+DROP COLUMN descricao;
+=========================================
+-- 8
+
+ALTER TABLE pedido
+DROP COLUMN observacao;
+=========================================
+-- 9
+
+ALTER TABLE movimentacao_estoque
+DROP COLUMN usuario_responsavel;
+=========================================
+-- 10
+
+ALTER TABLE cliente
+DROP COLUMN data_atualizacao;
+=========================================

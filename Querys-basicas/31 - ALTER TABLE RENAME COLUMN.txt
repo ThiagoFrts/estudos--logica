@@ -1,0 +1,73 @@
+-- 1
+
+ALTER TABLE cliente ADD COLUMN observacao VARCHAR(255);
+
+ALTER TABLE cliente
+RENAME COLUMN observacao TO observacao_cliente;
+=========================================
+-- 2
+
+ALTER TABLE fornecedor ADD COLUMN site VARCHAR(150);
+
+ALTER TABLE fornecedor
+RENAME COLUMN site TO site_oficial;
+=========================================
+-- 3
+
+ALTER TABLE categoria ADD COLUMN ativo BOOLEAN;
+
+ALTER TABLE categoria
+RENAME COLUMN ativo TO status_ativo;
+=========================================
+-- 4
+
+ALTER TABLE produto ADD COLUMN marca VARCHAR(80);
+
+ALTER TABLE produto
+RENAME COLUMN marca TO marca_produto;
+=========================================
+-- 5
+
+ALTER TABLE cor ADD COLUMN codigo_hex CHAR(7);
+
+ALTER TABLE cor
+RENAME COLUMN codigo_hex TO codigo_cor;
+=========================================
+-- 6
+
+ALTER TABLE tamanho ADD COLUMN ordem_exibicao INT;
+
+ALTER TABLE tamanho
+RENAME COLUMN ordem_exibicao TO ordem_tamanho;
+=========================================
+-- 7
+
+ALTER TABLE palavra_chave ADD COLUMN descricao VARCHAR(150);
+
+ALTER TABLE palavra_chave
+RENAME COLUMN descricao TO descricao_palavra;
+=========================================
+-- 8
+
+ALTER TABLE pedido ADD COLUMN observacao VARCHAR(255);
+
+ALTER TABLE pedido
+RENAME COLUMN observacao TO observacao_pedido;
+=========================================
+-- 9
+
+ALTER TABLE movimentacao_estoque
+ADD COLUMN usuario_responsavel VARCHAR(120);
+
+ALTER TABLE movimentacao_estoque
+RENAME COLUMN usuario_responsavel TO responsavel_movimentacao;
+=========================================
+-- 10
+
+ALTER TABLE cliente ADD COLUMN data_atualizacao DATETIME;
+
+ALTER TABLE cliente
+RENAME COLUMN data_atualizacao TO ultima_atualizacao;
+
+DESCRIBE cliente;
+=========================================

@@ -1,0 +1,39 @@
+-- 1 
+
+SELECT SUM(valor_total) FROM pedido;
+========================================= 
+-- 2
+
+SELECT SUM(subtotal) FROM pedido;
+=========================================
+-- 3
+
+SELECT SUM(frete) FROM pedido;
+=========================================
+-- 4
+
+SELECT SUM(desconto) FROM pedido;
+=========================================
+-- 5
+SELECT SUM(quantidade) FROM movimentacao_estoque;
+=========================================
+-- 6
+
+SELECT SUM(quantidade) FROM movimentacao_estoque;
+=========================================
+-- 7
+
+SELECT SUM(preco_base) FROM produto;
+=========================================
+-- 8
+
+SELECT SUM(custo_unitario) FROM movimentacao_estoque;
+=========================================
+-- 9
+
+SELECT SUM(valor_total) FROM pedido WHERE status_pedido = 'Entregue' ;
+=========================================
+-- 10
+
+SELECT SUM(quantidade_estoque) FROM produto_variacao;
+=========================================

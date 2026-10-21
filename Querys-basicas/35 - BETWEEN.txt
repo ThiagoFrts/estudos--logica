@@ -1,0 +1,55 @@
+-- 1
+
+SELECT * FROM produto
+WHERE preco_base BETWEEN 50 AND 100;
+=========================================
+-- 2
+
+SELECT * FROM produto
+WHERE preco_base BETWEEN 100 AND 300;
+=========================================
+-- 3
+
+SELECT * FROM pedido
+WHERE valor_total BETWEEN 200 AND 500;
+=========================================
+-- 4
+
+SELECT * FROM item_pedido
+WHERE quantidade BETWEEN 2 AND 5;
+=========================================
+-- 5
+
+SELECT * FROM movimentacao_estoque
+WHERE quantidade BETWEEN 10 AND 50;
+=========================================
+-- 6
+
+SELECT * FROM produto_variacao
+WHERE quantidade_estoque BETWEEN 5 AND 20;
+=========================================
+-- 7
+
+SELECT * FROM produto
+WHERE preco_base BETWEEN 100 AND 500
+ORDER BY preco_base ASC;
+=========================================
+-- 8
+
+SELECT * FROM pedido
+WHERE valor_total BETWEEN 300 AND 1000;
+=========================================
+-- 9
+
+SELECT * FROM movimentacao_estoque
+WHERE data_movimentacao BETWEEN '2025-05-01' AND '2025-07-31 23:59:59';
+=========================================
+-- 10
+
+SELECT p.*, pv.sku, pv.quantidade_estoque
+FROM produto p
+INNER JOIN produto_variacao pv
+ON p.id_produto = pv.id_produto
+WHERE p.preco_base BETWEEN 50 AND 200
+AND pv.quantidade_estoque > 0;
+=========================================

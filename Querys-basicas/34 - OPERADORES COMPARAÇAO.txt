@@ -1,0 +1,51 @@
+-- 1
+SELECT * FROM produto
+WHERE preco_base = 49.90;
+=========================================
+-- 2
+
+SELECT * FROM produto
+WHERE preco_base <> 49.90;
+=========================================
+-- 3
+
+SELECT * FROM produto
+WHERE preco_base != 49.90;
+=========================================
+-- 4
+
+SELECT * FROM produto
+WHERE preco_base > 100;
+=========================================
+-- 5
+
+SELECT * FROM produto
+WHERE preco_base < 100;
+=========================================
+-- 6
+
+SELECT * FROM produto
+WHERE preco_base >= 200;
+=========================================
+-- 7
+
+SELECT * FROM produto
+WHERE preco_base <= 50;
+=========================================
+-- 8
+
+SELECT * FROM pedido
+WHERE valor_total > (
+    SELECT AVG(valor_total) FROM pedido
+);
+=========================================
+-- 9
+
+SELECT * FROM item_pedido
+WHERE quantidade <> 1;
+=========================================
+-- 10
+
+SELECT * FROM movimentacao_estoque
+WHERE quantidade >= 10;
+=========================================

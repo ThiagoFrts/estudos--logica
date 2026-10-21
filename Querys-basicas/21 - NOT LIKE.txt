@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM cliente WHERE nome NOT LIKE 'A%';
+=========================================
+-- 2
+
+SELECT * FROM cliente WHERE email NOT LIKE '%.com';
+=========================================
+-- 3
+
+SELECT * FROM produto WHERE nome NOT LIKE '%camisa%';
+=========================================
+-- 4
+
+SELECT * FROM produto WHERE descricao NOT LIKE '%masculino%';
+=========================================
+-- 5
+
+SELECT * FROM categoria WHERE nome NOT LIKE '%moda%';
+=========================================
+-- 6
+
+SELECT * FROM fornecedor WHERE nome NOT LIKE 'M%';
+=========================================
+-- 7
+
+SELECT cidade FROM endereco WHERE cidade NOT LIKE '%São%';
+=========================================
+-- 8
+
+SELECT sku FROM produto_variacao WHERE sku NOT LIKE 'SKU-001%';
+=========================================
+-- 9
+
+SELECT * FROM palavra_chave WHERE termo NOT LIKE '%verão%';
+=========================================
+-- 10
+
+SELECT email FROM cliente WHERE email NOT LIKE '%@gmail.com';
+=========================================

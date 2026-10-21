@@ -1,0 +1,40 @@
+-- 1
+
+SELECT * FROM produto WHERE preco_base > 100;
+=========================================
+-- 2
+
+SELECT * FROM cliente WHERE data_cadastro > '2025-01-01';
+=========================================
+-- 3
+
+SELECT * FROM pedido WHERE valor_total > 500;
+=========================================
+-- 4
+
+SELECT * FROM produto WHERE id_categoria = 1;
+=========================================
+-- 5
+
+SELECT * FROM produto_variacao WHERE quantidade_estoque = 0;
+=========================================
+-- 6
+
+SELECT * FROM pedido WHERE status_pedido = 'ENTREGUE';
+=========================================
+-- 7
+
+SELECT * FROM movimentacao_estoque WHERE tipo_movimentacao = 'ENTRADA';
+=========================================
+-- 8
+
+SELECT * FROM fornecedor WHERE nome = 'Moda Brasil Ltda';
+=========================================
+-- 9
+
+SELECT * FROM item_pedido WHERE quantidade > 2;
+=========================================
+-- 10
+
+SELECT * FROM produto WHERE preco_base < 50;
+=========================================
