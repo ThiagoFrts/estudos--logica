@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+.caixa {
+    max-width: 360px;
+    margin: 60px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 14px;
+}
+
+label {
+    display: block;
+    margin: 12px 0;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.aprovado {
+    color: green;
+}
+
+.atencao {
+    color: #b05a00;
+}
+
+.reprovado {
+    color: #b00020;
+}

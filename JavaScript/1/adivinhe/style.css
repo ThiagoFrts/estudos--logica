@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #334155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 380px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    color: #0f172a;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 28px 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #475569;
+    text-align: center;
+}
+
+#palpite {
+    width: 100%;
+    max-width: 220px;
+    padding: 10px 14px;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#palpite:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.botoes {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+button {
+    flex: 1;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#tentar {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+#tentar:hover {
+    background-color: #1d4ed8;
+}
+
+#reiniciar {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+#reiniciar:hover {
+    background-color: #cbd5e1;
+}
+
+#mensagem {
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 4px;
+}
+
+#tentativas {
+    font-size: 0.85rem;
+    color: #64748b;
+}
